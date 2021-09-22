@@ -1,0 +1,199 @@
+import React, { Component } from 'react';
+import { Button, View, Text,Alert,TouchableOpacity,StyleSheet,SafeAreaView,Platform,StatusBar,ImageBackground,ScrollView } from 'react-native';
+import AppHeader from '../components/AppHeader'
+
+export default class Fruits extends React.Component {
+render() {
+    return (
+      <View style={styles.container}>
+      <SafeAreaView style={styles.droidSafeArea}>
+      <ImageBackground style={styles.backgroundImage}
+                    source={require("../assets/HomeBack.jpg")}>
+ <ScrollView>
+<AppHeader/>
+
+      <TouchableOpacity style={{                               
+        backgroundColor:"#00ffff",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+      }}
+ onPress={()=>this.props.navigation.navigate('Coco')}
+ >
+
+      <Text style={{
+        fontWeight:"bold",
+        fontSize:20
+      }}>Coconuts</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={{
+        backgroundColor:"#00ffff",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+      }}
+      onPress={()=>this.props.navigation.navigate('Banana')}>
+
+      <Text style={{
+        fontWeight:"bold",
+        fontSize:20
+      }}>Banana</Text>
+      </TouchableOpacity>
+
+      
+    <TouchableOpacity style={{
+        backgroundColor:"#00ffff",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+      }}
+      onPress={()=>this.props.navigation.navigate('Mangoes')}>
+
+      <Text style={{
+        fontWeight:"bold",
+        fontSize:20
+      }}>Mangoes</Text>
+      </TouchableOpacity>
+    <TouchableOpacity style={{
+        backgroundColor:"#00ffff",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+      }}
+      onPress={()=>this.props.navigation.navigate('Guavas')}>
+
+      <Text style={{
+        fontWeight:"bold",
+        fontSize:20
+      }}>Guavas</Text>
+      </TouchableOpacity>
+   <TouchableOpacity style={{
+         backgroundColor:"#00ffff",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+      }}
+      onPress={()=>this.props.navigation.navigate('Squashes')}>
+
+      <Text style={{
+        fontWeight:"bold",
+        fontSize:20
+      }}>Squashes</Text>
+      </TouchableOpacity>
+   <TouchableOpacity style={{
+         backgroundColor:"#00ffff",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+      }}
+      onPress={()=>this.props.navigation.navigate('Sugarcane')}>
+
+      <Text style={{
+        fontWeight:"bold",
+        fontSize:20
+      }}>Sugarcane</Text>
+      </TouchableOpacity>
+         <TouchableOpacity style={{
+        backgroundColor:"#00ffff",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+      }}
+      onPress={()=>this.props.navigation.navigate('TFF')}>
+
+      <Text style={{
+        fontWeight:"bold",
+        fontSize:20
+      }}>Tropical fresh fruit</Text>
+      </TouchableOpacity>
+       <TouchableOpacity style={{
+         backGroundColor:"white",
+        marginTop:20,
+        marginLeft:75, 
+        marginBottom:40,
+        width:200,
+        height:100,
+        borderRadius:50,
+         justifyContent:"center",
+         alignItems:"center",
+         borderWidth:5,
+         borderColor:'black'
+
+       }} onPress={()=>this.props.navigation.navigate('HomeScreen')}>
+          <Text style={styles.buttonText}> Go Home</Text>
+        </TouchableOpacity>
+            </ScrollView>
+</ImageBackground>
+</SafeAreaView>
+
+      </View>
+    );
+  }
+  }
+const styles=StyleSheet.create({
+
+back:{
+  backgroundColor:"#0080ff"
+},
+container:{
+        flex: 1
+    },
+    droidSafeArea:{
+        marginTop: Platform.OS==='android' ? StatusBar.currentHeight :0
+    },
+    backgroundImage:{
+        flex: 1,
+    resizeMode:'cover'
+    },
+})
+    
